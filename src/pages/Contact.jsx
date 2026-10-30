@@ -5,7 +5,7 @@ import { contact } from "../data/siteContent";
 import { pageContent } from "../data/pageContent";
 import { sendContact } from "../services/contactService";
 
-const interestValues = ['Residential', 'Commercial', 'Business purchase or sale', 'Court-ordered sale', 'Other'];
+const interestValues = ['Residential', 'Commercial', 'Presales', 'Court-ordered sales', 'Land', 'Business purchase & sale', 'Tenant Placement', 'Full Property Management', 'Others'];
 
 export default function Contact() {
   const { lang } = useLanguage();

@@ -10,7 +10,7 @@ export const pageContent = {
     contact: {
       eyebrow: 'Get in touch', title: 'Contact Kenny',
       name: 'Full name', email: 'Email', phone: 'Phone', interest: 'Interest', message: 'Message',
-      interests: ['Residential', 'Commercial', 'Business purchase or sale', 'Court-ordered sale', 'Other'],
+      interests: ['Residential', 'Commercial', 'Presales', 'Court-ordered sales', 'Land', 'Business purchase & sale', 'Tenant Placement', 'Full Property Management', 'Others'],
       send: 'Send message', sending: 'Sending…', sent: 'Thank you. Your message was sent.',
       unconfigured: 'Online messages are not connected yet. Please call', orEmail: 'or email',
       error: 'The message could not be sent. Please call or email Kenny directly.',
@@ -29,7 +29,7 @@ export const pageContent = {
     contact: {
       eyebrow: '欢迎联系', title: '联系 Kenny',
       name: '姓名', email: '电子邮箱', phone: '联系电话', interest: '咨询类别', message: '留言内容',
-      interests: ['住宅物业', '商业地产', '生意买卖', '法拍房', '其他'],
+      interests: ['住宅物业', '商业地产', '楼花预售', '法拍房', '土地', '生意买卖', '招租与租客筛选', '全程物业管理', '其他'],
       send: '发送留言', sending: '正在发送…', sent: '谢谢，您的留言已发送。',
       unconfigured: '在线留言功能尚未开通，请致电', orEmail: '或发送电子邮件至',
       error: '留言未能发送，请直接致电或发送电子邮件联系 Kenny。',
@@ -48,7 +48,7 @@ export const pageContent = {
     contact: {
       eyebrow: '歡迎聯繫', title: '聯繫 Kenny',
       name: '姓名', email: '電子郵箱', phone: '聯絡電話', interest: '諮詢類別', message: '留言內容',
-      interests: ['住宅物業', '商業地產', '生意買賣', '法拍房', '其他'],
+      interests: ['住宅物業', '商業地產', '樓花預售', '法拍房', '土地', '生意買賣', '招租與租客篩選', '全程物業管理', '其他'],
       send: '傳送留言', sending: '正在傳送…', sent: '謝謝，您的留言已傳送。',
       unconfigured: '線上留言功能尚未開通，請致電', orEmail: '或傳送電子郵件至',
       error: '留言未能傳送，請直接致電或傳送電子郵件聯繫 Kenny。',
