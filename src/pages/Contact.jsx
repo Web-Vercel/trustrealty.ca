@@ -17,9 +17,9 @@ export default function Contact() {
     setStatus("sending");
     const data = Object.fromEntries(new FormData(form));
     try {
-      const r = await sendContact(data);
-      if (r.unconfigured) setStatus("unconfigured");
-      else { setStatus("sent"); form.reset(); }
+      await sendContact(data);
+      setStatus("sent");
+      form.reset();
     } catch { setStatus("error"); }
   }
   return <section className="py-20"><div className="wrap grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
@@ -33,7 +33,6 @@ export default function Contact() {
       <button disabled={status === "sending"} className="btn-primary sm:col-span-2">{status === "sending" ? t.sending : t.send}</button>
       <div aria-live="polite" className="sm:col-span-2">
         {status === "sent" && <p className="text-green-700">{t.sent}</p>}
-        {status === "unconfigured" && <p className="rounded-lg bg-amber-50 p-4 text-amber-900">{t.unconfigured} {contact.phoneDisplay} {t.orEmail} {contact.email}.</p>}
         {status === "error" && <p className="text-red-700">{t.error}</p>}
       </div>
     </form>
