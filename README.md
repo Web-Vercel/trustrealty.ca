@@ -8,8 +8,10 @@ Independent Vite/React website for Kenny Lu, RE/MAX City Realty.
 
 ## Contact form
 
-The form posts to `https://formsubmit.co/kennylu.realtor@gmail.com` by default. No API key or Vercel environment variable is required. The browser uses a standard HTML form POST, allowing FormSubmit to show its verification, activation or error page directly. FormSubmit forwards inquiries to that inbox and uses the visitor’s email as the reply-to address. CAPTCHA verification remains enabled.
+The contact form sends JSON to `https://api.web3forms.com/submit`. It uses the owner-provided public Web3Forms access key in `src/services/contactService.js`; the recipient inbox is bound to that key in Web3Forms. No Vercel environment variables or email passwords are needed. `VITE_CONTACT_ENDPOINT` is no longer used.
 
-Before relying on delivery, submit the form once from the deployed website and confirm FormSubmit’s activation email in `kennylu.realtor@gmail.com` (check spam too). Then send a second inquiry and verify it arrives. The integration does not establish inbox activation or delivery until these steps are completed.
+The form stays on the Contact page, reports success only after Web3Forms accepts the request, and retains the visitor's input if submission fails. A honeypot and submission timeout are included. Feedback is available in English, Simplified Chinese and Traditional Chinese.
 
-`VITE_CONTACT_ENDPOINT` is an optional override for another standard HTML form POST endpoint. Do not use the FormSubmit `/ajax/` endpoint here. Remove any obsolete override in Vercel and redeploy to use the default. Never put secret API keys in `VITE_` variables; they are public browser configuration.
+After deployment, submit one inquiry and verify delivery to `kennylu.realtor@gmail.com` (including spam). Mocked tests confirm submission behavior but cannot establish key activation, provider availability or inbox delivery.
+
+Run `node tests/contactService.test.mjs` for submission checks without sending real email.
