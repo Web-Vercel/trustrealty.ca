@@ -12,7 +12,7 @@ export default function Home() {
       <div className="wrap grid items-center gap-10 py-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-16">
         <div className="relative z-10">
           <p className="text-xs font-semibold uppercase leading-6 tracking-[.2em] text-slate-500">{t.region}</p>
-          <p className="mt-7 font-display text-3xl text-ink">{t.name} <span className="ml-2 text-xl text-slate-500">{t.chineseName}</span></p>
+          <p className="mt-7 font-display text-3xl text-ink">{t.name}</p>
           <h1 id="home-title" className="mt-5 whitespace-pre-line font-display text-[2.8rem] font-semibold leading-[1.15] tracking-tight text-ink sm:text-6xl xl:text-[4.25rem]">{t.headline}</h1>
           <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">{t.intro}</p>
           <div className="mt-8 flex flex-wrap items-center gap-5">
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className="hero-portrait relative mx-auto w-full max-w-lg overflow-hidden rounded-t-[10rem] border border-ink/5 bg-white">
           <img src="/assets/kenny-lu.png" alt="Kenny Lu, RE/MAX City Realty" className="aspect-[4/4.5] w-full object-cover object-top" fetchPriority="high" width="1024" height="1152"/>
-          <div className="absolute inset-x-0 bottom-0 bg-ink/95 px-6 py-5 text-white sm:px-8"><p className="font-display text-2xl">Kenny Lu <span className="ml-2 text-sm text-white/70">{t.chineseName}</span></p><p className="mt-1 text-[11px] font-semibold uppercase tracking-[.2em] text-white/70">{contact.brokerage}</p></div>
+          <div className="absolute inset-x-0 bottom-0 bg-ink/95 px-6 py-5 text-white sm:px-8"><p className="font-display text-2xl">Kenny Lu</p><p className="mt-1 text-[11px] font-semibold uppercase tracking-[.2em] text-white/70">{contact.brokerage}</p></div>
         </div>
       </div>
     </section>

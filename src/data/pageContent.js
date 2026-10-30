@@ -20,7 +20,7 @@ export const pageContent = {
   },
   'zh-CN': {
     about: {
-      eyebrow: '关于', title: '认识 Kenny Lu 卢锦泉', licence: 'RE/MAX 持牌房地产经纪',
+      eyebrow: '关于', title: '认识 Kenny Lu', licence: 'RE/MAX 持牌房地产经纪',
       heading: '以商业思维，洞察房地产。',
       biography: 'Kenny 的专业背景涵盖企业管理、会计、财务分析、风险管理及信息技术。他将严谨的分析思维运用于大温哥华地区的住宅、商业地产及生意买卖。',
       communication: '以务实的建议、细致的尽职调查，以及英语、粤语和普通话的清晰沟通，为客户提供专业服务。',
@@ -39,7 +39,7 @@ export const pageContent = {
   },
   'zh-TW': {
     about: {
-      eyebrow: '關於', title: '認識 Kenny Lu 盧錦泉', licence: 'RE/MAX 持牌房地產經紀',
+      eyebrow: '關於', title: '認識 Kenny Lu', licence: 'RE/MAX 持牌房地產經紀',
       heading: '以商業思維，洞察房地產。',
       biography: 'Kenny 的專業背景涵蓋企業管理、會計、財務分析、風險管理及資訊科技。他將嚴謹的分析思維運用於大溫哥華地區的住宅、商業地產及生意買賣。',
       communication: '以務實的建議、細緻的盡職調查，以及英語、粵語和普通話的清晰溝通，為客戶提供專業服務。',
