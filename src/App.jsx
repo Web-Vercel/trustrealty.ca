@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
@@ -13,6 +13,7 @@ const LanguageContext = createContext();
 export const useLanguage = () => useContext(LanguageContext);
 export default function App() {
   const [lang, setLang] = useState("en");
+  useEffect(() => { document.documentElement.lang = lang; }, [lang]);
   return <LanguageContext.Provider value={{ lang, setLang }}><Routes><Route element={<Layout />}>
     <Route path="/" element={<Home />} /><Route path="/services" element={<Services />} /><Route path="/listings" element={<Listings />} />
     <Route path="/residential" element={<Listings />} /><Route path="/residential/:slug" element={<Property />} />
