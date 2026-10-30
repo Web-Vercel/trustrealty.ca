@@ -8,7 +8,7 @@ export const pageContent = {
       values: [['Financial analysis', 'A structured review of property economics and investment considerations.'], ['Risk management', 'Identifying material questions before they affect a transaction.'], ['Technology', 'Using modern tools to organize information and streamline communication.'], ['Integrity', 'Transparent advice grounded in your objectives.']],
     },
     contact: {
-      eyebrow: 'Get in touch', title: 'Contact Kenny', intro: 'Discuss your residential, commercial, business or investment goals.',
+      eyebrow: 'Get in touch', title: 'Contact Kenny',
       name: 'Full name', email: 'Email', phone: 'Phone', interest: 'Interest', message: 'Message',
       interests: ['Residential', 'Commercial', 'Business purchase or sale', 'Court-ordered sale', 'Other'],
       send: 'Send message', sending: 'Sending…', sent: 'Thank you. Your message was sent.',
@@ -27,7 +27,7 @@ export const pageContent = {
       values: [['财务分析', '系统分析物业的财务表现与投资考量。'], ['风险管理', '在重要问题影响交易之前，及时识别并深入了解。'], ['科技应用', '运用现代工具整理信息，提升沟通效率。'], ['诚信为本', '围绕您的目标，提供透明、坦诚的专业建议。']],
     },
     contact: {
-      eyebrow: '欢迎联系', title: '联系 Kenny', intro: '与 Kenny 探讨您的住宅、商业地产、生意买卖或投资目标。',
+      eyebrow: '欢迎联系', title: '联系 Kenny',
       name: '姓名', email: '电子邮箱', phone: '联系电话', interest: '咨询类别', message: '留言内容',
       interests: ['住宅物业', '商业地产', '生意买卖', '法拍房', '其他'],
       send: '发送留言', sending: '正在发送…', sent: '谢谢，您的留言已发送。',
@@ -46,7 +46,7 @@ export const pageContent = {
       values: [['財務分析', '系統分析物業的財務表現與投資考量。'], ['風險管理', '在重要問題影響交易之前，及時識別並深入了解。'], ['科技應用', '運用現代工具整理資訊，提升溝通效率。'], ['誠信為本', '圍繞您的目標，提供透明、坦誠的專業建議。']],
     },
     contact: {
-      eyebrow: '歡迎聯繫', title: '聯繫 Kenny', intro: '與 Kenny 探討您的住宅、商業地產、生意買賣或投資目標。',
+      eyebrow: '歡迎聯繫', title: '聯繫 Kenny',
       name: '姓名', email: '電子郵箱', phone: '聯絡電話', interest: '諮詢類別', message: '留言內容',
       interests: ['住宅物業', '商業地產', '生意買賣', '法拍房', '其他'],
       send: '傳送留言', sending: '正在傳送…', sent: '謝謝，您的留言已傳送。',

@@ -23,7 +23,7 @@ export default function Contact() {
     } catch { setStatus("error"); }
   }
   return <section className="py-20"><div className="wrap grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
-    <div><p className="eyebrow">{t.eyebrow}</p><h1 className="heading mt-3">{t.title}</h1><p className="mt-5 text-lg text-slate-600">{t.intro}</p><div className="mt-8 space-y-5"><a href={contact.phoneHref} className="flex gap-3"><Phone className="text-brand"/>{contact.phoneDisplay}</a><a href={`mailto:${contact.email}`} className="flex gap-3"><Mail className="text-brand"/>{contact.email}</a><p className="flex gap-3"><MapPin className="shrink-0 text-brand"/>{contact.office}</p></div></div>
+    <div><p className="eyebrow">{t.eyebrow}</p><h1 className="heading mt-3">{t.title}</h1><div className="mt-8 space-y-5"><a href={contact.phoneHref} className="flex gap-3"><Phone className="text-brand"/>{contact.phoneDisplay}</a><a href={`mailto:${contact.email}`} className="flex gap-3"><Mail className="text-brand"/>{contact.email}</a><p className="flex gap-3"><MapPin className="shrink-0 text-brand"/>{contact.office}</p></div></div>
     <form onSubmit={submit} className="card grid gap-5 sm:grid-cols-2">
       <label className="text-sm font-bold">{t.name}<input required name="name" autoComplete="name" className="mt-2 w-full rounded-lg border p-3 font-normal"/></label>
       <label className="text-sm font-bold">{t.email}<input required type="email" name="email" autoComplete="email" className="mt-2 w-full rounded-lg border p-3 font-normal"/></label>
