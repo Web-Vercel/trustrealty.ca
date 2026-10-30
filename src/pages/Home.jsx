@@ -14,7 +14,9 @@ export default function Home() {
           <p className="text-xs font-semibold uppercase leading-6 tracking-[.2em] text-slate-500">{t.region}</p>
           <p className="mt-7 font-display text-3xl text-ink">{t.name}</p>
           <h1 id="home-title" className="mt-5 whitespace-pre-line font-display text-[2.8rem] font-semibold leading-[1.15] tracking-tight text-ink sm:text-6xl xl:text-[4.25rem]">{t.headline}</h1>
-          <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">{t.intro}</p>
+          <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">{t.intro.split(new RegExp(`(${t.introHighlights.join("|")})`, "g")).map((part, index) =>
+            t.introHighlights.includes(part) ? <strong key={index} className="font-bold text-ink">{part}</strong> : part
+          )}</p>
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <Link to="/contact" className="btn-primary gap-3">{t.contact}<ArrowRight size={17}/></Link>
             <Link to="/services" className="inline-flex items-center gap-2 py-3 text-sm font-semibold text-ink">{t.explore}<ArrowRight size={16}/></Link>

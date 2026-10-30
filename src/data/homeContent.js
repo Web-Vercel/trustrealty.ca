@@ -3,6 +3,7 @@ export const homeContent = {
     region: 'GREATER VANCOUVER · BRITISH COLUMBIA',
     headline: 'Your property.\nA bigger perspective.',
     intro: 'From your next move to the everyday care of your investment. Personal guidance from Kenny Lu, licensed in real estate trading and rental property management.',
+    introHighlights: ['real estate trading', 'rental property management', 'licensed'],
     credentials: 'Trading Services · Rental Property Management',
     explore: 'Discover my services', eyebrow: 'TWO LICENCES. ONE TRUSTED RELATIONSHIP.',
     heading: 'Expertise for every chapter.',
@@ -24,6 +25,7 @@ export const homeContent = {
   'zh-CN': {
     region: '大温哥华 · 不列颠哥伦比亚省', headline: '置业有远见，\n托管更安心。',
     intro: '从房地产买卖到出租物业的日常管理，Kenny Lu以两项持牌专业服务，陪伴您的每一步。',
+    introHighlights: ['房地产买卖', '出租物业的日常管理', '两项持牌'],
     credentials: '房地产买卖 · 出租物业管理', explore: '了解两大业务',
     eyebrow: '两项牌照 · 一份信赖', heading: '买卖与管理，各有所长。',
     description: '清晰规划每一次买卖，用心照顾每一处出租物业。围绕您的目标，提供专属服务。',
@@ -38,6 +40,7 @@ export const homeContent = {
   'zh-TW': {
     region: '大溫哥華 · 不列顛哥倫比亞省', headline: '置業有遠見，\n託管更安心。',
     intro: '從房地產買賣到出租物業的日常管理，Kenny Lu以兩項持牌專業服務，陪伴您的每一步。',
+    introHighlights: ['房地產買賣', '出租物業的日常管理', '兩項持牌'],
     credentials: '房地產買賣 · 出租物業管理', explore: '了解兩大業務',
     eyebrow: '兩項牌照 · 一份信賴', heading: '買賣與管理，各有所長。',
     description: '清晰規劃每一次買賣，用心照顧每一處出租物業。圍繞您的目標，提供專屬服務。',
