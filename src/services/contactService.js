@@ -1,5 +1,5 @@
 // Web3Forms access keys are public identifiers intended for browser forms.
-const accessKey = "36438908-e244-456e-9659-36e9cf59626d";
+const accessKey = "afcf07d7-1c95-4ba0-b8da-e796ea037b85";
 
 export async function sendContact(payload) {
   const response = await fetch("https://api.web3forms.com/submit", {
