@@ -41,7 +41,7 @@ const serviceItems = {
   },
 };
 
-const includedLabels = { en: "All Tenant Replacement Services, plus:", "zh-CN": "包含全部租客更换服务，另加：", "zh-TW": "包含全部租客更換服務，另加：" };
+const includedLabels = { en: "All Tenant Replacement Services, PLUS:", "zh-CN": "包含全部租客更换服务，另加：", "zh-TW": "包含全部租客更換服務，另加：" };
 
 function ServiceDetails({ label, items, included }) {
   const [open, setOpen] = useState(false);
