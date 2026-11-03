@@ -18,7 +18,7 @@ export const homeContent = {
       ['Tenant Placement', 'Rental marketing, viewings, tenant screening and tenancy setup.'],
       ['Full Property Management', 'Ongoing tenancy support, rent collection, maintenance coordination and owner reporting.'],
     ],
-    rentalCta: 'Discuss your rental property',
+    rentalCta: 'Discuss your rental property', rentalDetails: 'Learn more',
     closing: 'One conversation. A clearer direction.', closingText: 'Tell Kenny what you have in mind, and find the service that fits.',
     contact: 'Speak with Kenny', name: 'Kenny Lu',
   },
@@ -35,7 +35,7 @@ export const homeContent = {
     rental: '出租物业管理', rentalLicense: 'RENTAL PROPERTY MANAGEMENT · 持牌出租物业管理',
     rentalIntro: '为物业寻找合适租客，为业主分担日常事务。让出租更省心，让持有更安心。',
     rentalItems: [['招租与租客筛选', '出租推广、带看、租客背景筛选及租约安排。'], ['全程物业管理', '日常租务支持、租金收取、维修协调及业主报告。']],
-    rentalCta: '咨询出租物业管理', closing: '从一次交谈，找到下一步方向。', closingText: '与 Kenny 分享您的计划，选择适合您的专业服务。', contact: '联系 Kenny', name: 'Kenny Lu',
+    rentalCta: '咨询出租物业管理', rentalDetails: '详细介绍', closing: '从一次交谈，找到下一步方向。', closingText: '与 Kenny 分享您的计划，选择适合您的专业服务。', contact: '联系 Kenny', name: 'Kenny Lu',
   },
   'zh-TW': {
     region: '大溫哥華 · 不列顛哥倫比亞省', headline: '置業有遠見，\n託管更安心。',
@@ -50,6 +50,6 @@ export const homeContent = {
     rental: '出租物業管理', rentalLicense: 'RENTAL PROPERTY MANAGEMENT · 持牌出租物業管理',
     rentalIntro: '為物業尋找合適租客，為業主分擔日常事務。讓出租更省心，讓持有更安心。',
     rentalItems: [['招租與租客篩選', '出租推廣、帶看、租客背景篩選及租約安排。'], ['全程物業管理', '日常租務支援、租金收取、維修協調及業主報告。']],
-    rentalCta: '諮詢出租物業管理', closing: '從一次交談，找到下一步方向。', closingText: '與 Kenny 分享您的計劃，選擇適合您的專業服務。', contact: '聯繫 Kenny', name: 'Kenny Lu',
+    rentalCta: '諮詢出租物業管理', rentalDetails: '詳細介紹', closing: '從一次交談，找到下一步方向。', closingText: '與 Kenny 分享您的計劃，選擇適合您的專業服務。', contact: '聯繫 Kenny', name: 'Kenny Lu',
   },
 };

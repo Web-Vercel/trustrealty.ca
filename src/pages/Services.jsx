@@ -36,7 +36,7 @@ export default function Services() {
               const Icon = i === 0 ? Users : ShieldCheck;
               return <li className="flex items-start gap-4" key={title}><Icon size={22} strokeWidth={1.5} className="mt-1 shrink-0 text-[#e3c79a]"/><div><h4 className="text-base font-semibold">{title}</h4><p className="mt-1 text-sm leading-6 text-slate-300">{description}</p></div></li>;
             })}</ul>
-            <Link to="/services/property-management" className="mt-auto flex items-center justify-between gap-4 border-t border-white/20 pt-6 text-sm font-bold">{lang === "zh-TW" ? "詳細介紹" : "详细介绍"}<ArrowRight size={20} className="shrink-0 text-[#e3c79a]"/></Link>
+            <Link to="/services/property-management" className="mt-auto flex items-center justify-between gap-4 border-t border-white/20 pt-6 text-sm font-bold">{t.rentalDetails}<ArrowRight size={20} className="shrink-0 text-[#e3c79a]"/></Link>
           </article>
         </div>
       </div>
