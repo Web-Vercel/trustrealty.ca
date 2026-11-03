@@ -29,15 +29,15 @@ const detailsLabels = { en: "Service details", "zh-CN": "服务内容", "zh-TW":
 const serviceItems = {
   en: {
     tenant: ["Tenant Credit Checks", "Marketing Your Property", "Property Viewings", "Tenant Application Processing", "Tenant Interviews", "Reference Checks", "Invoice Verification", "Lease Agreement", "Damage Collection", "Move In Inspection", "New Tenant Orientation"],
-    management: ["Rent Collection", "Contractors Coordination", "Tenant Management", "Strata Communication", "Move Out Inspection", "Billing & Invoices", "Financial Reports", "Annual Reports"],
+    management: ["Rent Collection", "Contractors Coordination", "Tenant Management", "Strata Communication", "Move Out Inspection", "Billing & Invoices", "Financial Reports"],
   },
   "zh-CN": {
     tenant: ["租客信用调查", "物业出租推广", "物业带看", "租赁申请处理", "租客面谈", "推荐人核查", "发票核实", "租赁协议", "损坏赔偿收取", "入住检查", "新租客入住指引"],
-    management: ["租金收取", "承包商协调", "租客管理", "分契物业沟通", "退租检查", "账单与发票", "财务报告", "年度报告"],
+    management: ["租金收取", "承包商协调", "租客管理", "分契物业沟通", "退租检查", "账单与发票", "财务报告"],
   },
   "zh-TW": {
     tenant: ["租客信用調查", "物業出租推廣", "物業帶看", "租賃申請處理", "租客面談", "推薦人核查", "發票核實", "租賃協議", "損壞賠償收取", "入住檢查", "新租客入住指引"],
-    management: ["租金收取", "承包商協調", "租客管理", "分契物業溝通", "退租檢查", "帳單與發票", "財務報告", "年度報告"],
+    management: ["租金收取", "承包商協調", "租客管理", "分契物業溝通", "退租檢查", "帳單與發票", "財務報告"],
   },
 };
 
