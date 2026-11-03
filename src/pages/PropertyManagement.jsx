@@ -27,9 +27,9 @@ const content = {
 
 const detailsLabels = { en: "Service details", "zh-CN": "服务内容", "zh-TW": "服務內容" };
 const serviceItems = {
-  en: ["Tenant Credit Checks", "Marketing Your Property", "Advertising Fees", "Property Viewings", "Tenant Application Processing", "Tenant Interviews", "Reference Checks", "Invoice Verification", "RTA Compliant Lease Contracts", "Damage Deposit Collection", "Move In Inspection", "New Tenant Orientation", "Rent Collection", "Contractor Scheduling & Coordination", "24-hour Tenant Calls", "Tenant Management", "Communication with Strata", "Move Out Inspection", "Billing & Invoicing For Expenses", "Monthly Financial Reports", "Inspections Twice A Year", "Year End Accounting"],
-  "zh-CN": ["租客信用调查", "物业出租推广", "广告费用", "物业带看", "租赁申请处理", "租客面谈", "推荐人核查", "发票核实", "符合《住宅租赁法》的租约", "损坏押金收取", "入住检查", "新租客入住指引", "租金收取", "承包商预约与协调", "24 小时租客来电服务", "租客管理", "与分契物业管理方沟通", "退租检查", "费用账单与发票处理", "每月财务报告", "每年两次物业检查", "年终会计结算"],
-  "zh-TW": ["租客信用調查", "物業出租推廣", "廣告費用", "物業帶看", "租賃申請處理", "租客面談", "推薦人核查", "發票核實", "符合《住宅租賃法》的租約", "損壞押金收取", "入住檢查", "新租客入住指引", "租金收取", "承包商預約與協調", "24 小時租客來電服務", "租客管理", "與分契物業管理方溝通", "退租檢查", "費用帳單與發票處理", "每月財務報告", "每年兩次物業檢查", "年終會計結算"],
+  en: ["Tenant Credit Checks", "Marketing Your Property", "Property Viewings", "Tenant Application Processing", "Tenant Interviews", "Reference Checks", "Invoice Verification", "Lease Agreement", "Damage Collection", "Move In Inspection", "New Tenant Orientation", "Rent Collection", "Contractors Coordination", "Tenant Management", "Strata Communication", "Move Out Inspection", "Billing & Invoices", "Financial Reports", "Annual Reports"],
+  "zh-CN": ["租客信用调查", "物业出租推广", "物业带看", "租赁申请处理", "租客面谈", "推荐人核查", "发票核实", "租赁协议", "损坏赔偿收取", "入住检查", "新租客入住指引", "租金收取", "承包商协调", "租客管理", "分契物业沟通", "退租检查", "账单与发票", "财务报告", "年度报告"],
+  "zh-TW": ["租客信用調查", "物業出租推廣", "物業帶看", "租賃申請處理", "租客面談", "推薦人核查", "發票核實", "租賃協議", "損壞賠償收取", "入住檢查", "新租客入住指引", "租金收取", "承包商協調", "租客管理", "分契物業溝通", "退租檢查", "帳單與發票", "財務報告", "年度報告"],
 };
 
 function ServiceDetails({ label, items }) {
@@ -76,7 +76,7 @@ export default function PropertyManagement() {
           {lang !== "en" && <p className="mt-2 font-semibold text-ink">{t.tenant}</p>}
           <p className="mt-3 text-sm leading-6 text-slate-500">{t.tenantIntro}</p>
           <p className="service-price"><strong>50%</strong><span>{t.rent}<br/><span className="font-semibold text-brand">{t.once}</span></span></p>
-          <ServiceDetails label={detailsLabels[lang]} items={serviceItems[lang].slice(0, 12)} />
+          <ServiceDetails label={detailsLabels[lang]} items={serviceItems[lang].slice(0, 11)} />
         </article>
       </div>
       <div className="mt-12 text-center"><p className="mb-5 font-display text-2xl text-ink">{t.bottom}</p><Link to="/contact" className="btn-dark gap-3">{t.cta}<ArrowRight size={17}/></Link></div>
