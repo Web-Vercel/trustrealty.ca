@@ -28,15 +28,15 @@ const content = {
 const detailsLabels = { en: "Service details", "zh-CN": "服务内容", "zh-TW": "服務內容" };
 const serviceItems = {
   en: {
-    tenant: ["Advertise rental property", "Tenant Credit Checks", "Property Viewings", "Tenant Application Processing", "Tenant Interviews", "Reference Checks", "Invoice Verification", "Prepare Lease / Tenancy Agreement", "New Tenant Orientation", "Collect Deposit"],
+    tenant: ["Advertise rental property", "Tenant Credit Checks", "Property Viewings", "Tenant Application Processing", "Tenant Interviews", "Reference Checks", "Prepare Lease / Tenancy Agreement", "New Tenant Orientation", "Collect Deposit"],
     management: ["Lease / Tenancy Agreement", "Move In Inspection", "Rent Collection", "Contractors Coordination", "Tenant Management", "Strata Communication", "Move Out Inspection", "Billing & Invoices", "Financial Reports"],
   },
   "zh-CN": {
-    tenant: ["出租物业广告推广", "租客信用调查", "物业带看", "租赁申请处理", "租客面谈", "推荐人核查", "发票核实", "准备租约／租赁协议", "新租客入住指引", "收取押金"],
+    tenant: ["出租物业广告推广", "租客信用调查", "物业带看", "租赁申请处理", "租客面谈", "推荐人核查", "准备租约／租赁协议", "新租客入住指引", "收取押金"],
     management: ["租约／租赁协议", "入住检查", "租金收取", "承包商协调", "租客管理", "分契物业沟通", "退租检查", "账单与发票", "财务报告"],
   },
   "zh-TW": {
-    tenant: ["出租物業廣告推廣", "租客信用調查", "物業帶看", "租賃申請處理", "租客面談", "推薦人核查", "發票核實", "準備租約／租賃協議", "新租客入住指引", "收取押金"],
+    tenant: ["出租物業廣告推廣", "租客信用調查", "物業帶看", "租賃申請處理", "租客面談", "推薦人核查", "準備租約／租賃協議", "新租客入住指引", "收取押金"],
     management: ["租約／租賃協議", "入住檢查", "租金收取", "承包商協調", "租客管理", "分契物業溝通", "退租檢查", "帳單與發票", "財務報告"],
   },
 };
