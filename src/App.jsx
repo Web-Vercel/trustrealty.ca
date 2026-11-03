@@ -10,6 +10,7 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Legal from "./pages/Legal";
 const LanguageContext = createContext();
 export const useLanguage = () => useContext(LanguageContext);
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
     <Route path="/" element={<Home />} /><Route path="/services" element={<Services />} /><Route path="/services/property-management" element={<PropertyManagement />} /><Route path="/listings" element={<Listings />} />
     <Route path="/residential" element={<Listings />} /><Route path="/residential/:slug" element={<Property />} />
     <Route path="/about" element={<About />} /><Route path="/faq" element={<FAQ />} /><Route path="/contact" element={<Contact />} />
+    <Route path="/privacy" element={<Legal type="privacy" />} /><Route path="/terms" element={<Legal type="terms" />} />
     <Route path="/ai-consultation" element={<Contact />} /><Route path="*" element={<NotFound />} />
   </Route></Routes></LanguageContext.Provider>;
 }

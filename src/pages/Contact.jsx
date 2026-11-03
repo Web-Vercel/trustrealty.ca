@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { legalLabels } from "../data/legalContent";
 import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "../App";
@@ -35,6 +37,7 @@ export default function Contact() {
       <label className="text-sm font-bold">{t.phone}<input type="tel" name="phone" autoComplete="tel" className="mt-2 w-full rounded-lg border p-3 font-normal"/></label>
       <label className="text-sm font-bold">{t.interest}<select name="interest" className="mt-2 w-full rounded-lg border p-3 font-normal">{t.interests.map((label, i) => <option key={interestValues[i]} value={interestValues[i]}>{label}</option>)}</select></label>
       <label className="text-sm font-bold sm:col-span-2">{t.message}<textarea required name="message" rows="5" className="mt-2 w-full rounded-lg border p-3 font-normal"/></label>
+      <p className="text-xs font-normal leading-6 text-slate-500 sm:col-span-2">{legalLabels[lang].notice} <Link to="/privacy" className="text-brand underline underline-offset-4">{legalLabels[lang].policy}</Link>{legalLabels[lang].suffix}</p>
       <button type="submit" disabled={status === "sending"} className="btn-primary disabled:cursor-wait disabled:opacity-60 sm:col-span-2">{status === "sending" ? t.sending : t.send}</button>
       <div aria-live="polite" className="sm:col-span-2">
         {status === "sent" && <p className="text-green-700">{t.sent}</p>}
