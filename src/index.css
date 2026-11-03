@@ -31,6 +31,5 @@
 .service-details-trigger:hover { color: #cf1736; }
 .service-details-trigger span { text-decoration: none; font-size: 18px; }
 .orbit-card:has(.service-details-trigger[aria-expanded="true"]) { z-index: 2; }
-.service-details-panel { position: absolute; top: 100%; left: 0; right: 0; z-index: 10; max-height: min(400px, 60vh); overflow-y: auto; overscroll-behavior: contain; padding: 20px; border: 1px solid #e6e3dc; border-radius: 14px; background: white; box-shadow: 0 16px 40px -12px #12243f40; }
+.service-details-panel { position: relative; margin-top: 8px; padding: 20px; border: 1px solid #e6e3dc; border-radius: 14px; background: white; box-shadow: 0 16px 40px -12px #12243f40; }
 .service-details-panel .service-inclusions { padding-top: 0; gap: 12px; font-size: 13px; }
-@media (max-width: 580px) { .service-details-panel { position: relative; margin-top: 8px; } }

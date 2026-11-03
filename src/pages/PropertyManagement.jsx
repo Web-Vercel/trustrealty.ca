@@ -27,24 +27,37 @@ const content = {
 
 const detailsLabels = { en: "Service details", "zh-CN": "服务内容", "zh-TW": "服務內容" };
 const serviceItems = {
-  en: ["Tenant Credit Checks", "Marketing Your Property", "Property Viewings", "Tenant Application Processing", "Tenant Interviews", "Reference Checks", "Invoice Verification", "Lease Agreement", "Damage Collection", "Move In Inspection", "New Tenant Orientation", "Rent Collection", "Contractors Coordination", "Tenant Management", "Strata Communication", "Move Out Inspection", "Billing & Invoices", "Financial Reports", "Annual Reports"],
-  "zh-CN": ["租客信用调查", "物业出租推广", "物业带看", "租赁申请处理", "租客面谈", "推荐人核查", "发票核实", "租赁协议", "损坏赔偿收取", "入住检查", "新租客入住指引", "租金收取", "承包商协调", "租客管理", "分契物业沟通", "退租检查", "账单与发票", "财务报告", "年度报告"],
-  "zh-TW": ["租客信用調查", "物業出租推廣", "物業帶看", "租賃申請處理", "租客面談", "推薦人核查", "發票核實", "租賃協議", "損壞賠償收取", "入住檢查", "新租客入住指引", "租金收取", "承包商協調", "租客管理", "分契物業溝通", "退租檢查", "帳單與發票", "財務報告", "年度報告"],
+  en: {
+    tenant: ["Tenant Credit Checks", "Marketing Your Property", "Property Viewings", "Tenant Application Processing", "Tenant Interviews", "Reference Checks", "Invoice Verification", "Lease Agreement", "Damage Collection", "Move In Inspection", "New Tenant Orientation"],
+    management: ["Rent Collection", "Contractors Coordination", "Tenant Management", "Strata Communication", "Move Out Inspection", "Billing & Invoices", "Financial Reports", "Annual Reports"],
+  },
+  "zh-CN": {
+    tenant: ["租客信用调查", "物业出租推广", "物业带看", "租赁申请处理", "租客面谈", "推荐人核查", "发票核实", "租赁协议", "损坏赔偿收取", "入住检查", "新租客入住指引"],
+    management: ["租金收取", "承包商协调", "租客管理", "分契物业沟通", "退租检查", "账单与发票", "财务报告", "年度报告"],
+  },
+  "zh-TW": {
+    tenant: ["租客信用調查", "物業出租推廣", "物業帶看", "租賃申請處理", "租客面談", "推薦人核查", "發票核實", "租賃協議", "損壞賠償收取", "入住檢查", "新租客入住指引"],
+    management: ["租金收取", "承包商協調", "租客管理", "分契物業溝通", "退租檢查", "帳單與發票", "財務報告", "年度報告"],
+  },
 };
 
-function ServiceDetails({ label, items }) {
+const includedLabels = { en: "All Tenant Replacement Services, plus:", "zh-CN": "包含全部租客更换服务，另加：", "zh-TW": "包含全部租客更換服務，另加：" };
+
+function ServiceDetails({ label, items, included }) {
   const [open, setOpen] = useState(false);
+  const [pinned, setPinned] = useState(false);
   const id = useId();
   const container = useRef(null);
   useEffect(() => {
     if (!open) return;
-    const closeOutside = event => { if (!container.current?.contains(event.target)) setOpen(false); };
+    const closeOutside = event => { if (!container.current?.contains(event.target)) { setOpen(false); setPinned(false); } };
     document.addEventListener("pointerdown", closeOutside);
     return () => document.removeEventListener("pointerdown", closeOutside);
   }, [open]);
-  return <div ref={container} className="service-details" onPointerEnter={event => { if (event.pointerType === "mouse") setOpen(true); }} onPointerLeave={event => { if (event.pointerType === "mouse") setOpen(false); }} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }} onKeyDown={event => { if (event.key === "Escape") { setOpen(false); event.stopPropagation(); } }}>
-    <button id={`${id}-trigger`} type="button" className="service-details-trigger" aria-expanded={open} aria-controls={id} onFocus={event => { if (event.target.matches(":focus-visible")) setOpen(true); }} onClick={() => setOpen(value => !value)}>{label}<span aria-hidden="true">{open ? "−" : "+"}</span></button>
+  return <div ref={container} className="service-details" onPointerEnter={event => { if (event.pointerType === "mouse") setOpen(true); }} onPointerLeave={event => { if (event.pointerType === "mouse" && !pinned) setOpen(false); }} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) { setOpen(false); setPinned(false); } }} onKeyDown={event => { if (event.key === "Escape") { setOpen(false); setPinned(false); event.stopPropagation(); } }}>
+    <button id={`${id}-trigger`} type="button" className="service-details-trigger" aria-expanded={open} aria-controls={id} onFocus={event => { if (event.target.matches(":focus-visible")) setOpen(true); }} onClick={() => { setOpen(!pinned); setPinned(!pinned); }}>{label}<span aria-hidden="true">{open ? "−" : "+"}</span></button>
     <div id={id} role="region" aria-labelledby={`${id}-trigger`} hidden={!open} className="service-details-panel" tabIndex={open ? 0 : -1}>
+      {included && <p className="mb-4 rounded-lg bg-[#f5f1e9] p-3 text-sm font-semibold leading-6 text-ink">{included}</p>}
       <ul className="service-inclusions">{items.map(item => <li key={item}><Check size={16} aria-hidden="true"/><span>{item}</span></li>)}</ul>
     </div>
   </div>;
@@ -68,7 +81,7 @@ export default function PropertyManagement() {
           {lang !== "en" && <p className="mt-2 font-semibold text-ink">{t.full}</p>}
           <p className="mt-3 text-sm leading-6 text-slate-500">{t.fullIntro}</p>
           <p className="service-price"><strong>8%</strong><span>{t.rent}</span></p>
-          <ServiceDetails label={detailsLabels[lang]} items={serviceItems[lang]} />
+          <ServiceDetails label={detailsLabels[lang]} items={serviceItems[lang].management} included={includedLabels[lang]} />
         </article>
         <article className="orbit-card" aria-labelledby="tenant-replacement-title">
           <div className="mb-6 flex items-center justify-between"><span className="service-icon"><KeyRound size={24} strokeWidth={1.5}/></span><span className="text-xs font-semibold tracking-widest text-slate-400">02 / ONE-TIME</span></div>
@@ -76,7 +89,7 @@ export default function PropertyManagement() {
           {lang !== "en" && <p className="mt-2 font-semibold text-ink">{t.tenant}</p>}
           <p className="mt-3 text-sm leading-6 text-slate-500">{t.tenantIntro}</p>
           <p className="service-price"><strong>50%</strong><span>{t.rent}<br/><span className="font-semibold text-brand">{t.once}</span></span></p>
-          <ServiceDetails label={detailsLabels[lang]} items={serviceItems[lang].slice(0, 11)} />
+          <ServiceDetails label={detailsLabels[lang]} items={serviceItems[lang].tenant} />
         </article>
       </div>
       <div className="mt-12 text-center"><p className="mb-5 font-display text-2xl text-ink">{t.bottom}</p><Link to="/contact" className="btn-dark gap-3">{t.cta}<ArrowRight size={17}/></Link></div>
