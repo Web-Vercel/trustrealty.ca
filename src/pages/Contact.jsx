@@ -22,6 +22,13 @@ export default function Contact() {
     setStatus("sending");
     try {
       await sendContact(payload);
+      if (typeof window.oaiq === "function") {
+        try {
+          window.oaiq("measure", "lead_created", { type: "customer_action" });
+        } catch (error) {
+          console.warn("OpenAI Ads conversion tracking failed", error);
+        }
+      }
       form.reset();
       setStatus("sent");
     } catch {
