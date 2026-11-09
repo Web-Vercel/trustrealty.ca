@@ -1,3 +1,4 @@
+import ClientPortal from "../components/ClientPortal";
 import { ArrowLeft, ArrowRight, Check, KeyRound, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useId, useRef, useState } from "react";
@@ -92,6 +93,7 @@ export default function PropertyManagement() {
           <ServiceDetails label={detailsLabels[lang]} items={serviceItems[lang].tenant} />
         </article>
       </div>
+      <ClientPortal/>
       <div className="mt-12 text-center"><p className="mb-5 font-display text-2xl text-ink">{t.bottom}</p><Link to="/contact" className="btn-dark gap-3">{t.cta}<ArrowRight size={17}/></Link></div>
     </div>
   </section>;
