@@ -1,3 +1,4 @@
+import CommercialLeasingPromotion from "../components/CommercialLeasingPromotion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../App";
@@ -30,6 +31,7 @@ export default function Home() {
       </div>
     </section>
 
+    <CommercialLeasingPromotion/>
 
     <section className="border-t border-slate-200 bg-[#f8f7f4] py-14"><div className="wrap flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center"><div><h2 className="font-display text-3xl leading-tight text-ink">{t.closing}</h2><p className="mt-3 leading-7 text-slate-600">{t.closingText}</p></div><a href={contact.phoneHref} className="btn-dark shrink-0 gap-3">{contact.phoneDisplay}<ArrowRight size={17}/></a></div></section>
   </>;
